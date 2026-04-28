@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "plugins": [
+    {
+      "name": "coolprop",
+      "summary": "CoolProp thermophysical-property driver for sim-cli.",
+      "homepage": "https://github.com/svd-ai-lab/sim-plugin-coolprop",
+      "license_class": "oss",
+      "git": "https://github.com/svd-ai-lab/sim-plugin-coolprop",
+      "latest_version": "0.1.0",
+      "latest_wheel_url": "https://github.com/svd-ai-lab/sim-plugin-coolprop/releases/download/v0.1.0/sim_plugin_coolprop-0.1.0-py3-none-any.whl"
+    }
+  ]
+}
