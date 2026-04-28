@@ -15,7 +15,9 @@
       "summary": "LTspice driver for sim-cli (thin adapter over sim-ltspice).",
       "homepage": "https://github.com/svd-ai-lab/sim-plugin-ltspice",
       "license_class": "oss",
-      "git": "https://github.com/svd-ai-lab/sim-plugin-ltspice"
+      "git": "https://github.com/svd-ai-lab/sim-plugin-ltspice",
+      "latest_version": "0.1.0",
+      "latest_wheel_url": "https://github.com/svd-ai-lab/sim-plugin-ltspice/releases/download/v0.1.0/sim_plugin_ltspice-0.1.0-py3-none-any.whl"
     }
   ]
 }
