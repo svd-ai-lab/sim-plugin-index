@@ -12,12 +12,12 @@
     },
     {
       "name": "ltspice",
-      "summary": "LTspice driver for sim-cli (thin adapter over sim-ltspice).",
+      "summary": "LTspice driver for sim — bundled .asc/.net/.raw/.log lib + driver in one wheel.",
       "homepage": "https://github.com/svd-ai-lab/sim-plugin-ltspice",
       "license_class": "oss",
       "git": "https://github.com/svd-ai-lab/sim-plugin-ltspice",
-      "latest_version": "0.2.0",
-      "latest_wheel_url": "https://github.com/svd-ai-lab/sim-plugin-ltspice/releases/download/v0.2.0/sim_plugin_ltspice-0.2.0-py3-none-any.whl"
+      "latest_version": "0.2.1",
+      "latest_wheel_url": "https://github.com/svd-ai-lab/sim-plugin-ltspice/releases/download/v0.2.1/sim_plugin_ltspice-0.2.1-py3-none-any.whl"
     },
     {
       "name": "calculix",
