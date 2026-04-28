@@ -34,8 +34,11 @@ the plugin repo's GitHub Release page.
 The CLI's resolver consults each field in this order when a bare name is
 installed (see `sim._plugin_install.resolve_source`):
 
-1. `latest_wheel_url` — direct HTTPS install (preferred, no git required)
-2. `git` — fallback for plugins that haven't tagged a release yet
+1. `latest_wheel_url` — direct HTTPS install (preferred, no git required).
+   **Important:** the resolver returns immediately on `latest_wheel_url`
+   and does **not** fall back to `git` if the wheel 404s. Only set this
+   field once the release tag and asset exist.
+2. `git` — used when `latest_wheel_url` is absent. Always safe to set.
 3. else — assume `pip install sim-plugin-<name>` from PyPI (currently no plugins
    live on PyPI; the GitHub-only convention is the policy)
 
@@ -44,10 +47,13 @@ keep that field in lock-step with the active release tag.
 
 ## Adding a plugin
 
-1. Tag a release (`vX.Y.Z`) on the plugin repo and attach the built wheel as a
-   release asset.
-2. Open a PR here that adds the plugin's entry under `plugins`.
-3. Verify locally: `sim plugin install <name>` should pull the wheel.
+1. Open a PR with the plugin's entry under `plugins`. At minimum: `name`,
+   `summary`, `homepage`, `license_class`, `git`. Bare-name install via
+   `git+https://` works as soon as this lands.
+2. Tag a release (`vX.Y.Z`) on the plugin repo and attach the built wheel
+   as a release asset.
+3. Open a follow-up PR adding `latest_version` + `latest_wheel_url` so
+   the resolver prefers the direct-HTTPS path.
 
 ## Commercial plugins
 
