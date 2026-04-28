@@ -83,6 +83,13 @@
       "git": "https://github.com/svd-ai-lab/sim-plugin-newton"
     },
     {
+      "name": "openfoam",
+      "summary": "OpenFOAM driver for sim-cli (Phase 3a canary).",
+      "homepage": "https://github.com/svd-ai-lab/sim-plugin-openfoam",
+      "license_class": "oss",
+      "git": "https://github.com/svd-ai-lab/sim-plugin-openfoam"
+    },
+    {
       "name": "openmdao",
       "summary": "OpenMDAO driver for sim-cli.",
       "homepage": "https://github.com/svd-ai-lab/sim-plugin-openmdao",
