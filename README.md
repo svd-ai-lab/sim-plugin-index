@@ -57,7 +57,5 @@ keep that field in lock-step with the active release tag.
 
 ## Commercial plugins
 
-Commercial plugins are listed in the **private** mirror
-`svd-ai-lab/sim-plugin-index-commercial`, consulted only when
-`sim plugin install --include-commercial` is passed and the user has
-`gh auth`. Phase 3 of the plugin extraction refactor stands that up.
+Commercial plugin availability depends on third-party license conditions.
+Contact <contact@svd-ai-lab.com> to discuss commercial plugin access.
