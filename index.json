@@ -1,198 +1,200 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "plugins": [
     {
-      "name": "coolprop",
+      "id": "coolprop",
+      "name": "CoolProp",
+      "distribution": "wheel",
+      "install": "https://github.com/svd-ai-lab/sim-plugin-coolprop/releases/download/v0.1.0/sim_plugin_coolprop-0.1.0-py3-none-any.whl",
+      "version": "0.1.0",
       "summary": "CoolProp thermophysical-property driver for sim-cli.",
       "homepage": "https://github.com/svd-ai-lab/sim-plugin-coolprop",
-      "license_class": "oss",
-      "git": "https://github.com/svd-ai-lab/sim-plugin-coolprop",
-      "latest_version": "0.1.0",
-      "latest_wheel_url": "https://github.com/svd-ai-lab/sim-plugin-coolprop/releases/download/v0.1.0/sim_plugin_coolprop-0.1.0-py3-none-any.whl"
+      "license_class": "oss"
     },
     {
-      "name": "ltspice",
+      "id": "ltspice",
+      "name": "LTspice",
+      "distribution": "pypi",
+      "install": "sim-plugin-ltspice==0.2.3",
+      "version": "0.2.3",
       "summary": "LTspice driver for sim — bundled .asc/.net/.raw/.log lib + driver in one wheel.",
       "homepage": "https://github.com/svd-ai-lab/sim-plugin-ltspice",
-      "license_class": "oss",
-      "git": "https://github.com/svd-ai-lab/sim-plugin-ltspice",
-      "latest_version": "0.2.2",
-      "latest_wheel_url": "https://github.com/svd-ai-lab/sim-plugin-ltspice/releases/download/v0.2.2/sim_plugin_ltspice-0.2.2-py3-none-any.whl"
+      "license_class": "oss"
     },
     {
-      "name": "calculix",
+      "id": "calculix",
+      "name": "CalculiX",
       "summary": "CalculiX driver for sim-cli.",
       "homepage": "https://github.com/svd-ai-lab/sim-plugin-calculix",
-      "license_class": "oss",
-      "git": "https://github.com/svd-ai-lab/sim-plugin-calculix"
+      "license_class": "oss"
     },
     {
-      "name": "devito",
+      "id": "devito",
+      "name": "Devito",
       "summary": "Devito driver for sim-cli.",
       "homepage": "https://github.com/svd-ai-lab/sim-plugin-devito",
-      "license_class": "oss",
-      "git": "https://github.com/svd-ai-lab/sim-plugin-devito"
+      "license_class": "oss"
     },
     {
-      "name": "elmer",
+      "id": "elmer",
+      "name": "Elmer",
       "summary": "Elmer driver for sim-cli.",
       "homepage": "https://github.com/svd-ai-lab/sim-plugin-elmer",
-      "license_class": "oss",
-      "git": "https://github.com/svd-ai-lab/sim-plugin-elmer"
+      "license_class": "oss"
     },
     {
-      "name": "fipy",
+      "id": "fipy",
+      "name": "FiPy",
       "summary": "FiPy driver for sim-cli.",
       "homepage": "https://github.com/svd-ai-lab/sim-plugin-fipy",
-      "license_class": "oss",
-      "git": "https://github.com/svd-ai-lab/sim-plugin-fipy"
+      "license_class": "oss"
     },
     {
-      "name": "gmsh",
+      "id": "gmsh",
+      "name": "Gmsh",
       "summary": "Gmsh driver for sim-cli.",
       "homepage": "https://github.com/svd-ai-lab/sim-plugin-gmsh",
-      "license_class": "oss",
-      "git": "https://github.com/svd-ai-lab/sim-plugin-gmsh"
+      "license_class": "oss"
     },
     {
-      "name": "isaac",
+      "id": "isaac",
+      "name": "Isaac Sim",
       "summary": "Isaac Sim driver for sim-cli.",
       "homepage": "https://github.com/svd-ai-lab/sim-plugin-isaac",
-      "license_class": "oss",
-      "git": "https://github.com/svd-ai-lab/sim-plugin-isaac"
+      "license_class": "oss"
     },
     {
-      "name": "lammps",
+      "id": "lammps",
+      "name": "LAMMPS",
       "summary": "LAMMPS driver for sim-cli.",
       "homepage": "https://github.com/svd-ai-lab/sim-plugin-lammps",
-      "license_class": "oss",
-      "git": "https://github.com/svd-ai-lab/sim-plugin-lammps"
+      "license_class": "oss"
     },
     {
+      "id": "meshio",
       "name": "meshio",
       "summary": "meshio driver for sim-cli.",
       "homepage": "https://github.com/svd-ai-lab/sim-plugin-meshio",
-      "license_class": "oss",
-      "git": "https://github.com/svd-ai-lab/sim-plugin-meshio"
+      "license_class": "oss"
     },
     {
-      "name": "newton",
+      "id": "newton",
+      "name": "NVIDIA Newton",
       "summary": "NVIDIA Newton driver for sim-cli.",
       "homepage": "https://github.com/svd-ai-lab/sim-plugin-newton",
-      "license_class": "oss",
-      "git": "https://github.com/svd-ai-lab/sim-plugin-newton"
+      "license_class": "oss"
     },
     {
-      "name": "openfoam",
+      "id": "openfoam",
+      "name": "OpenFOAM",
       "summary": "OpenFOAM driver for sim-cli (Phase 3a canary).",
       "homepage": "https://github.com/svd-ai-lab/sim-plugin-openfoam",
-      "license_class": "oss",
-      "git": "https://github.com/svd-ai-lab/sim-plugin-openfoam"
+      "license_class": "oss"
     },
     {
-      "name": "openmdao",
+      "id": "openmdao",
+      "name": "OpenMDAO",
       "summary": "OpenMDAO driver for sim-cli.",
       "homepage": "https://github.com/svd-ai-lab/sim-plugin-openmdao",
-      "license_class": "oss",
-      "git": "https://github.com/svd-ai-lab/sim-plugin-openmdao"
+      "license_class": "oss"
     },
     {
-      "name": "openseespy",
+      "id": "openseespy",
+      "name": "OpenSeesPy",
       "summary": "OpenSeesPy driver for sim-cli.",
       "homepage": "https://github.com/svd-ai-lab/sim-plugin-openseespy",
-      "license_class": "oss",
-      "git": "https://github.com/svd-ai-lab/sim-plugin-openseespy"
+      "license_class": "oss"
     },
     {
+      "id": "pandapower",
       "name": "pandapower",
       "summary": "pandapower driver for sim-cli.",
       "homepage": "https://github.com/svd-ai-lab/sim-plugin-pandapower",
-      "license_class": "oss",
-      "git": "https://github.com/svd-ai-lab/sim-plugin-pandapower"
+      "license_class": "oss"
     },
     {
-      "name": "paraview",
+      "id": "paraview",
+      "name": "ParaView",
       "summary": "ParaView driver for sim-cli.",
       "homepage": "https://github.com/svd-ai-lab/sim-plugin-paraview",
-      "license_class": "oss",
-      "git": "https://github.com/svd-ai-lab/sim-plugin-paraview"
+      "license_class": "oss"
     },
     {
-      "name": "pybamm",
+      "id": "pybamm",
+      "name": "PyBaMM",
       "summary": "PyBaMM driver for sim-cli.",
       "homepage": "https://github.com/svd-ai-lab/sim-plugin-pybamm",
-      "license_class": "oss",
-      "git": "https://github.com/svd-ai-lab/sim-plugin-pybamm"
+      "license_class": "oss"
     },
     {
-      "name": "pymfem",
+      "id": "pymfem",
+      "name": "PyMFEM",
       "summary": "PyMFEM driver for sim-cli.",
       "homepage": "https://github.com/svd-ai-lab/sim-plugin-pymfem",
-      "license_class": "oss",
-      "git": "https://github.com/svd-ai-lab/sim-plugin-pymfem"
+      "license_class": "oss"
     },
     {
+      "id": "pymoo",
       "name": "pymoo",
       "summary": "pymoo driver for sim-cli.",
       "homepage": "https://github.com/svd-ai-lab/sim-plugin-pymoo",
-      "license_class": "oss",
-      "git": "https://github.com/svd-ai-lab/sim-plugin-pymoo"
+      "license_class": "oss"
     },
     {
-      "name": "pyomo",
+      "id": "pyomo",
+      "name": "Pyomo",
       "summary": "Pyomo driver for sim-cli.",
       "homepage": "https://github.com/svd-ai-lab/sim-plugin-pyomo",
-      "license_class": "oss",
-      "git": "https://github.com/svd-ai-lab/sim-plugin-pyomo"
+      "license_class": "oss"
     },
     {
-      "name": "pyvista",
+      "id": "pyvista",
+      "name": "PyVista",
       "summary": "PyVista driver for sim-cli.",
       "homepage": "https://github.com/svd-ai-lab/sim-plugin-pyvista",
-      "license_class": "oss",
-      "git": "https://github.com/svd-ai-lab/sim-plugin-pyvista"
+      "license_class": "oss"
     },
     {
-      "name": "scikit_fem",
+      "id": "scikit_fem",
+      "name": "scikit-fem",
       "summary": "scikit-fem driver for sim-cli.",
       "homepage": "https://github.com/svd-ai-lab/sim-plugin-scikit_fem",
-      "license_class": "oss",
-      "git": "https://github.com/svd-ai-lab/sim-plugin-scikit_fem"
+      "license_class": "oss"
     },
     {
-      "name": "scikit_rf",
+      "id": "scikit_rf",
+      "name": "scikit-rf",
       "summary": "scikit-rf driver for sim-cli.",
       "homepage": "https://github.com/svd-ai-lab/sim-plugin-scikit_rf",
-      "license_class": "oss",
-      "git": "https://github.com/svd-ai-lab/sim-plugin-scikit_rf"
+      "license_class": "oss"
     },
     {
-      "name": "sfepy",
+      "id": "sfepy",
+      "name": "SfePy",
       "summary": "SfePy driver for sim-cli.",
       "homepage": "https://github.com/svd-ai-lab/sim-plugin-sfepy",
-      "license_class": "oss",
-      "git": "https://github.com/svd-ai-lab/sim-plugin-sfepy"
+      "license_class": "oss"
     },
     {
-      "name": "simpy",
+      "id": "simpy",
+      "name": "SimPy",
       "summary": "SimPy driver for sim-cli.",
       "homepage": "https://github.com/svd-ai-lab/sim-plugin-simpy",
-      "license_class": "oss",
-      "git": "https://github.com/svd-ai-lab/sim-plugin-simpy"
+      "license_class": "oss"
     },
     {
-      "name": "su2",
+      "id": "su2",
+      "name": "SU2",
       "summary": "SU2 driver for sim-cli.",
       "homepage": "https://github.com/svd-ai-lab/sim-plugin-su2",
-      "license_class": "oss",
-      "git": "https://github.com/svd-ai-lab/sim-plugin-su2"
+      "license_class": "oss"
     },
     {
-      "name": "trimesh",
+      "id": "trimesh",
+      "name": "Trimesh",
       "summary": "Trimesh driver for sim-cli.",
       "homepage": "https://github.com/svd-ai-lab/sim-plugin-trimesh",
-      "license_class": "oss",
-      "git": "https://github.com/svd-ai-lab/sim-plugin-trimesh"
+      "license_class": "oss"
     }
   ]
 }
