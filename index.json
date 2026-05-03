@@ -12,6 +12,16 @@
       "license_class": "oss"
     },
     {
+      "id": "comsol",
+      "name": "COMSOL",
+      "distribution": "pypi",
+      "install": "sim-plugin-comsol==0.1.7",
+      "version": "0.1.7",
+      "summary": "COMSOL Multiphysics driver for sim-cli.",
+      "homepage": "https://github.com/svd-ai-lab/sim-plugin-comsol",
+      "license_class": "oss"
+    },
+    {
       "id": "ltspice",
       "name": "LTspice",
       "distribution": "pypi",
