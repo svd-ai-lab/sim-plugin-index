@@ -2,6 +2,16 @@
   "schema_version": 2,
   "plugins": [
     {
+      "id": "abaqus",
+      "name": "Abaqus",
+      "distribution": "pypi",
+      "install": "sim-plugin-abaqus==0.1.4",
+      "version": "0.1.4",
+      "summary": "Dassault Systemes SIMULIA Abaqus driver for sim-cli.",
+      "homepage": "https://github.com/svd-ai-lab/sim-plugin-abaqus",
+      "license_class": "commercial"
+    },
+    {
       "id": "coolprop",
       "name": "CoolProp",
       "distribution": "wheel",
