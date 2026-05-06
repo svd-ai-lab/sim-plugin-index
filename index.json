@@ -54,9 +54,9 @@
     {
       "id": "simscale",
       "name": "SimScale",
-      "distribution": "git",
-      "install": "git+https://github.com/svd-ai-lab/sim-plugin-simscale.git@v0.1.0",
-      "version": "0.1.0",
+      "distribution": "pypi",
+      "install": "sim-plugin-simscale==0.1.1",
+      "version": "0.1.1",
       "summary": "SimScale cloud backend driver for sim-cli.",
       "homepage": "https://github.com/svd-ai-lab/sim-plugin-simscale",
       "license_class": "commercial"
