@@ -52,6 +52,16 @@
       "license_class": "oss"
     },
     {
+      "id": "simscale",
+      "name": "SimScale",
+      "distribution": "git",
+      "install": "git+https://github.com/svd-ai-lab/sim-plugin-simscale.git@v0.1.0",
+      "version": "0.1.0",
+      "summary": "SimScale cloud backend driver for sim-cli.",
+      "homepage": "https://github.com/svd-ai-lab/sim-plugin-simscale",
+      "license_class": "commercial"
+    },
+    {
       "id": "calculix",
       "name": "CalculiX",
       "summary": "CalculiX driver for sim-cli.",
