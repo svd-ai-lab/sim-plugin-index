@@ -32,6 +32,15 @@
       "license_class": "oss"
     },
     {
+      "id": "fluent",
+      "name": "Ansys Fluent",
+      "distribution": "pypi",
+      "install": "sim-plugin-fluent==0.2.0",
+      "version": "0.2.0",
+      "summary": "Ansys Fluent driver and bundled skill for sim-cli.",
+      "homepage": "https://github.com/svd-ai-lab/sim-plugin-fluent"
+    },
+    {
       "id": "hfss",
       "name": "Ansys HFSS",
       "distribution": "pypi",

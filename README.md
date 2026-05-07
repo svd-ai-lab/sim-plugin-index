@@ -29,12 +29,11 @@ https://raw.githubusercontent.com/svd-ai-lab/sim-plugin-index/main/index.json
     {
       "id":            "fluent",
       "name":          "Ansys Fluent",
-      "distribution":  "wheel",
-      "install":       "https://cdn.svdailab.com/wheels/sim_plugin_fluent-0.1.4-py3-none-any.whl#sha256=abcd…",
-      "version":       "0.1.4",
-      "summary":       "Ansys Fluent driver wrapper.",
-      "homepage":      "https://example.com/fluent-plugin",
-      "license_class": "commercial"
+      "distribution":  "pypi",
+      "install":       "sim-plugin-fluent==0.2.0",
+      "version":       "0.2.0",
+      "summary":       "Ansys Fluent driver and bundled skill for sim-cli.",
+      "homepage":      "https://github.com/svd-ai-lab/sim-plugin-fluent"
     }
   ]
 }
@@ -61,12 +60,8 @@ The `install` field carries everything needed to install. There is no separate `
 
 ## Adding a plugin
 
-1. Open a PR adding the entry under `plugins`. At minimum: `id`, `name`, `summary`, `homepage`, `license_class`. This makes the plugin discoverable via `sim plugin catalog` even before any release exists.
+1. Open a PR adding the entry under `plugins`. At minimum: `id`, `name`, `summary`, and `homepage`. This makes the plugin discoverable via `sim plugin catalog` even before any release exists.
 2. Tag a release on the plugin repo and either publish to PyPI (via OIDC Trusted Publishing) or attach a wheel as a GitHub Release asset.
 3. Open a follow-up PR adding `distribution`, `install`, and `version`.
 
 For wheel URLs, including a `#sha256=…` fragment is recommended so callers get integrity checking via standard pip/uv behavior.
-
-## Commercial plugins
-
-Commercial plugin availability depends on third-party license conditions. Contact <contact@svd-ai-lab.com> to discuss commercial plugin access.
