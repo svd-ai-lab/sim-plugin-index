@@ -52,8 +52,4 @@ The list of [sim-cli](https://github.com/svd-ai-lab/sim-cli) plugins — what ex
 
 ## For agents
 
-Parse the table above to discover plugins. The `Install` column holds the literal command to run. Rows with `—` are not yet installable. There is no JSON endpoint to fetch — this README is the canonical list.
-
-## History
-
-This repo previously shipped an `index.json` file consumed by `sim plugin catalog` in sim-cli. That command, the JSON fetcher, and the JSON file have all been removed. Older sim-cli installs that still run `sim plugin catalog` will hit a 404 and fall through their existing graceful-empty path.
+Parse the table above to discover plugins. The `Install` column holds the literal command to run. Rows with `—` are not yet installable. This README is the canonical list.
