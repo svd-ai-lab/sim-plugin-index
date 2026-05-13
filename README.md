@@ -10,15 +10,16 @@ Plugins may be maintained under [svd-ai-lab](https://github.com/svd-ai-lab) or i
 
 | Plugin | Solver area | Install |
 |---|---|---|
-| Abaqus | Structural FEA | `uv pip install sim-plugin-abaqus==0.1.4` |
-| CoolProp | Thermophysical properties | `uv pip install https://github.com/svd-ai-lab/sim-plugin-coolprop/releases/download/v0.1.0/sim_plugin_coolprop-0.1.0-py3-none-any.whl` |
 | COMSOL | Multiphysics | `uv pip install sim-plugin-comsol==0.1.7` |
-| Ansys Fluent | CFD | `uv pip install sim-plugin-fluent==0.2.0` |
+| Ansys Workbench Mechanical | Structural FEA | `uv pip install sim-plugin-mechanical==0.1.6` |
 | Ansys HFSS | 3D electromagnetics | `uv pip install sim-plugin-hfss==0.1.0` |
-| LTspice | Circuit / SPICE | `uv pip install sim-plugin-ltspice==0.2.3` |
-| MATLAB | MATLAB / Simulink | `uv pip install sim-plugin-matlab==0.1.1` |
+| Ansys Fluent | CFD | `uv pip install sim-plugin-fluent==0.2.0` |
+| MATLAB / Simulink | MATLAB / Simulink | `uv pip install sim-plugin-matlab==0.1.1` |
 | SimScale | Cloud CAE | `uv pip install sim-plugin-simscale==0.1.1` |
 | OpenFOAM | CFD | `uv pip install sim-plugin-openfoam==0.1.0` |
+| LTspice | Circuit / SPICE | `uv pip install sim-plugin-ltspice==0.2.3` |
+| Fusion 360 | CAD | `uv pip install https://github.com/svd-ai-lab/sim-plugin-fusion360/releases/download/v0.1.0/sim_plugin_fusion360-0.1.0-py3-none-any.whl` |
+| Blender | 3D modelling | `uv pip install https://github.com/svd-ai-lab/sim-plugin-blender/releases/download/v0.1.0/sim_plugin_blender-0.1.0-py3-none-any.whl` |
 
 ## Adding or updating a plugin
 
