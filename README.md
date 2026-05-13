@@ -56,4 +56,4 @@ Parse the table above to discover plugins. The `Install` column holds the litera
 
 ## History
 
-This repo previously shipped an `index.json` file consumed by `sim plugin catalog` in sim-cli. That command and the JSON fetcher were removed; the `index.json` file remains as an HTTP-200 deprecation stub for older sim-cli installs and will be deleted after a couple of release cycles.
+This repo previously shipped an `index.json` file consumed by `sim plugin catalog` in sim-cli. That command, the JSON fetcher, and the JSON file have all been removed. Older sim-cli installs that still run `sim plugin catalog` will hit a 404 and fall through their existing graceful-empty path.
