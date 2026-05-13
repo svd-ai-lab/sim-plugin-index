@@ -1,34 +1,52 @@
 # sim-plugin-index
 
-The list of [sim-cli](https://github.com/svd-ai-lab/sim-cli) plugins — what exists, who maintains it, and how to install it. Intended for humans browsing on GitHub and AI agents that need a copy-paste install string.
+The public index of sim-cli solver plugin packages: what exists, who maintains
+it, and which package spec to add to a uv project.
 
-Plugins may be maintained under [svd-ai-lab](https://github.com/svd-ai-lab) or in any third-party GitHub repo. The linked repo for each row is the source of truth for current version and release notes.
+Plugins may be maintained under [svd-ai-lab](https://github.com/svd-ai-lab) or
+in third-party GitHub repos. The linked repo for each row is the source of
+truth for current version, release notes, solver requirements, and plugin-owned
+skills.
 
 ## Installable plugins
 
-| Plugin | Solver area | Install |
-|---|---|---|
-| COMSOL | Multiphysics | `uv pip install sim-plugin-comsol` |
-| Ansys Workbench | Multiphysics project schematic | `uv pip install sim-plugin-workbench` |
-| Ansys Workbench Mechanical | Structural FEA | `uv pip install sim-plugin-mechanical` |
-| Ansys HFSS | 3D electromagnetics | `uv pip install sim-plugin-hfss` |
-| Ansys Fluent | CFD | `uv pip install sim-plugin-fluent` |
-| MATLAB / Simulink | MATLAB / Simulink | `uv pip install sim-plugin-matlab` |
-| SimScale | Cloud CAE | `uv pip install sim-plugin-simscale` |
-| OpenFOAM | CFD | `uv pip install sim-plugin-openfoam` |
-| LTspice | Circuit / SPICE | `uv pip install sim-plugin-ltspice` |
-| Fusion 360 | CAD | `uv pip install git+https://github.com/svd-ai-lab/sim-plugin-fusion360.git` |
-| Blender | 3D modelling | `uv pip install git+https://github.com/svd-ai-lab/sim-plugin-blender.git` |
+| Plugin | Solver area | Package spec | Add command |
+|---|---|---|---|
+| COMSOL | Multiphysics | `sim-plugin-comsol` | `uv add sim-cli-core sim-plugin-comsol` |
+| Ansys Workbench | Multiphysics project schematic | `sim-plugin-workbench` | `uv add sim-cli-core sim-plugin-workbench` |
+| Ansys Workbench Mechanical | Structural FEA | `sim-plugin-mechanical` | `uv add sim-cli-core sim-plugin-mechanical` |
+| Ansys HFSS | 3D electromagnetics | `sim-plugin-hfss` | `uv add sim-cli-core sim-plugin-hfss` |
+| Ansys Fluent | CFD | `sim-plugin-fluent` | `uv add sim-cli-core sim-plugin-fluent` |
+| MATLAB / Simulink | MATLAB / Simulink | `sim-plugin-matlab` | `uv add sim-cli-core sim-plugin-matlab` |
+| SimScale | Cloud CAE | `sim-plugin-simscale` | `uv add sim-cli-core sim-plugin-simscale` |
+| OpenFOAM | CFD | `sim-plugin-openfoam` | `uv add sim-cli-core sim-plugin-openfoam` |
+| LTspice | Circuit / SPICE | `sim-plugin-ltspice` | `uv add sim-cli-core sim-plugin-ltspice` |
+| Fusion 360 | CAD | `sim-plugin-fusion360 @ git+https://github.com/svd-ai-lab/sim-plugin-fusion360.git` | `uv add sim-cli-core "sim-plugin-fusion360 @ git+https://github.com/svd-ai-lab/sim-plugin-fusion360.git"` |
+| Blender | 3D modelling | `sim-plugin-blender @ git+https://github.com/svd-ai-lab/sim-plugin-blender.git` | `uv add sim-cli-core "sim-plugin-blender @ git+https://github.com/svd-ai-lab/sim-plugin-blender.git"` |
 
-Install strings resolve to the latest version. For a reproducible install, pin a version yourself — `uv pip install sim-plugin-comsol==X.Y.Z` for PyPI, or `…@vX.Y.Z` for git URLs. You can also pass the source argument to `sim plugin install` (e.g. `sim plugin install sim-plugin-comsol`); it's a thin pip wrapper that accepts the same package specs, wheel/sdist URLs, local paths, and `git+https://` URLs.
+After adding packages, sync skills and verify from the same uv project:
+
+```bash
+uv run sim plugin sync-skills --target .agents/skills --copy
+uv run sim check <solver>
+uv run sim plugin doctor <solver> --deep
+```
 
 ## Adding or updating a plugin
 
-Plugins do not have to live under `svd-ai-lab`. Anyone can publish a sim-cli plugin from their own GitHub repo (or PyPI account) and submit it here for discoverability.
+Plugins do not have to live under `svd-ai-lab`. Anyone can publish a sim-cli
+plugin from their own GitHub repo or PyPI account and submit it here for
+discoverability.
 
-1. Publish your plugin — either to PyPI (we recommend OIDC Trusted Publishing) or as a public GitHub repo with a `pyproject.toml` at the root.
-2. Open a PR adding a row to the table above. Use `uv pip install <pkg-name>` for PyPI, or `uv pip install git+https://github.com/<owner>/<repo>.git` for a GitHub repo.
+1. Publish your plugin, either to PyPI or as a public GitHub repo with a
+   `pyproject.toml` at the root.
+2. Open a PR adding a row to the table above.
+3. Use a package spec in the `Package spec` column and the full
+   `uv add sim-cli-core <plugin-package-spec>` command in the `Add command`
+   column.
 
 ## For agents
 
-Parse the table above to discover plugins. The `Install` column holds the literal command to run. This README is the canonical list.
+Parse the table above to discover plugin package specs. Add packages with
+`uv add sim-cli-core <plugin-package-spec>`, then run `sync-skills`, `check`,
+and `doctor` from that same uv project.
