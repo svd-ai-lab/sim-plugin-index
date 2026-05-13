@@ -2,8 +2,6 @@
 
 The list of [sim-cli](https://github.com/svd-ai-lab/sim-cli) plugins — what exists, who maintains it, and how to install it. Intended for humans browsing on GitHub and AI agents that need a copy-paste install string.
 
-`sim plugin install` does **not** read this list. The install command is a thin wrapper over `pip`/`uv pip` and accepts any pip-installable source. The list below is advisory; the trust boundary is the explicit source you pass to `sim plugin install`, not this README.
-
 Plugins may be maintained under [svd-ai-lab](https://github.com/svd-ai-lab) or in any third-party GitHub repo. The linked repo for each row is the source of truth for current version and release notes.
 
 ## Installable plugins
@@ -22,7 +20,7 @@ Plugins may be maintained under [svd-ai-lab](https://github.com/svd-ai-lab) or i
 | Fusion 360 | CAD | `uv pip install git+https://github.com/svd-ai-lab/sim-plugin-fusion360.git` |
 | Blender | 3D modelling | `uv pip install git+https://github.com/svd-ai-lab/sim-plugin-blender.git` |
 
-Install strings resolve to the latest version. For a reproducible install, pin a version yourself — `uv pip install sim-plugin-comsol==X.Y.Z` for PyPI, or `…@vX.Y.Z` for git URLs.
+Install strings resolve to the latest version. For a reproducible install, pin a version yourself — `uv pip install sim-plugin-comsol==X.Y.Z` for PyPI, or `…@vX.Y.Z` for git URLs. You can also pass the source argument to `sim plugin install` (e.g. `sim plugin install sim-plugin-comsol`); it's a thin pip wrapper that accepts the same package specs, wheel/sdist URLs, local paths, and `git+https://` URLs.
 
 ## Adding or updating a plugin
 
