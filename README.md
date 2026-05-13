@@ -10,25 +10,26 @@ Plugins may be maintained under [svd-ai-lab](https://github.com/svd-ai-lab) or i
 
 | Plugin | Solver area | Install |
 |---|---|---|
-| COMSOL | Multiphysics | `uv pip install sim-plugin-comsol==0.1.7` |
-| Ansys Workbench | Multiphysics project schematic | `uv pip install sim-plugin-workbench==0.1.2` |
-| Ansys Workbench Mechanical | Structural FEA | `uv pip install sim-plugin-mechanical==0.1.6` |
-| Ansys HFSS | 3D electromagnetics | `uv pip install sim-plugin-hfss==0.1.0` |
-| Ansys Fluent | CFD | `uv pip install sim-plugin-fluent==0.2.0` |
-| MATLAB / Simulink | MATLAB / Simulink | `uv pip install sim-plugin-matlab==0.1.1` |
-| SimScale | Cloud CAE | `uv pip install sim-plugin-simscale==0.1.1` |
-| OpenFOAM | CFD | `uv pip install sim-plugin-openfoam==0.1.0` |
-| LTspice | Circuit / SPICE | `uv pip install sim-plugin-ltspice==0.2.3` |
-| Fusion 360 | CAD | `uv pip install https://github.com/svd-ai-lab/sim-plugin-fusion360/releases/download/v0.1.0/sim_plugin_fusion360-0.1.0-py3-none-any.whl` |
-| Blender | 3D modelling | `uv pip install https://github.com/svd-ai-lab/sim-plugin-blender/releases/download/v0.1.0/sim_plugin_blender-0.1.0-py3-none-any.whl` |
+| COMSOL | Multiphysics | `uv pip install sim-plugin-comsol` |
+| Ansys Workbench | Multiphysics project schematic | `uv pip install sim-plugin-workbench` |
+| Ansys Workbench Mechanical | Structural FEA | `uv pip install sim-plugin-mechanical` |
+| Ansys HFSS | 3D electromagnetics | `uv pip install sim-plugin-hfss` |
+| Ansys Fluent | CFD | `uv pip install sim-plugin-fluent` |
+| MATLAB / Simulink | MATLAB / Simulink | `uv pip install sim-plugin-matlab` |
+| SimScale | Cloud CAE | `uv pip install sim-plugin-simscale` |
+| OpenFOAM | CFD | `uv pip install sim-plugin-openfoam` |
+| LTspice | Circuit / SPICE | `uv pip install sim-plugin-ltspice` |
+| Fusion 360 | CAD | `uv pip install git+https://github.com/svd-ai-lab/sim-plugin-fusion360.git` |
+| Blender | 3D modelling | `uv pip install git+https://github.com/svd-ai-lab/sim-plugin-blender.git` |
+
+Install strings resolve to the latest version. For a reproducible install, pin a version yourself — `uv pip install sim-plugin-comsol==X.Y.Z` for PyPI, or `…@vX.Y.Z` for git URLs.
 
 ## Adding or updating a plugin
 
 Plugins do not have to live under `svd-ai-lab`. Anyone can publish a sim-cli plugin from their own GitHub repo (or PyPI account) and submit it here for discoverability.
 
-1. Tag a release on your plugin repo and publish it — either to PyPI (we recommend OIDC Trusted Publishing) or as a wheel attached to a GitHub Release.
-2. Open a PR adding a row to the table above with a concrete, version-pinned `uv pip install …` command so the copy-paste install is reproducible.
-3. For updates, edit the row's `Install` cell to bump the pinned version.
+1. Publish your plugin — either to PyPI (we recommend OIDC Trusted Publishing) or as a public GitHub repo with a `pyproject.toml` at the root.
+2. Open a PR adding a row to the table above. Use `uv pip install <pkg-name>` for PyPI, or `uv pip install git+https://github.com/<owner>/<repo>.git` for a GitHub repo.
 
 ## For agents
 
