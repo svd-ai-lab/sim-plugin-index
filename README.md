@@ -11,6 +11,7 @@ Plugins may be maintained under [svd-ai-lab](https://github.com/svd-ai-lab) or i
 | Plugin | Solver area | Install |
 |---|---|---|
 | COMSOL | Multiphysics | `uv pip install sim-plugin-comsol==0.1.7` |
+| Ansys Workbench | Multiphysics project schematic | `uv pip install sim-plugin-workbench==0.1.2` |
 | Ansys Workbench Mechanical | Structural FEA | `uv pip install sim-plugin-mechanical==0.1.6` |
 | Ansys HFSS | 3D electromagnetics | `uv pip install sim-plugin-hfss==0.1.0` |
 | Ansys Fluent | CFD | `uv pip install sim-plugin-fluent==0.2.0` |
