@@ -21,7 +21,7 @@ skills.
 | SimScale | Cloud CAE | `sim-plugin-simscale` | `uv add sim-cli-core sim-plugin-simscale` |
 | OpenFOAM | CFD | `sim-plugin-openfoam` | `uv add sim-cli-core sim-plugin-openfoam` |
 | LTspice | Circuit / SPICE | `sim-plugin-ltspice` | `uv add sim-cli-core sim-plugin-ltspice` |
-| Fusion 360 | CAD | `sim-plugin-fusion360 @ git+https://github.com/svd-ai-lab/sim-plugin-fusion360.git` | `uv add sim-cli-core "sim-plugin-fusion360 @ git+https://github.com/svd-ai-lab/sim-plugin-fusion360.git"` |
+| Autodesk Fusion | CAD | `sim-plugin-autodeskfusion @ git+https://github.com/svd-ai-lab/sim-plugin-autodeskfusion.git` | `uv add sim-cli-core "sim-plugin-autodeskfusion @ git+https://github.com/svd-ai-lab/sim-plugin-autodeskfusion.git"` |
 | Blender | 3D modelling | `sim-plugin-blender @ git+https://github.com/svd-ai-lab/sim-plugin-blender.git` | `uv add sim-cli-core "sim-plugin-blender @ git+https://github.com/svd-ai-lab/sim-plugin-blender.git"` |
 
 After adding packages, sync skills and verify from the same uv project:
