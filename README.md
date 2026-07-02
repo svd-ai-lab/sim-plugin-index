@@ -4,9 +4,10 @@ Public index of sim-cli solver plugin packages: what exists, where the public
 source repository lives, and which package spec to install into a project
 environment.
 
-Plugins are usually installed from GitHub rather than PyPI. Treat the GitHub
-repository URL in the table as the source of truth for current versions, release
-notes, solver requirements, and plugin-owned skills.
+For public maintained plugins, prefer the PyPI package spec when the package is
+published there. Treat the GitHub repository URL in the table as the source of
+truth for release notes, solver requirements, plugin-owned skills, and fallback
+source installs.
 
 ## Installing plugins
 
@@ -15,7 +16,20 @@ environment that will run the solver workflow. The examples use `uv`, but the
 same package specs can be adapted to pip, conda, Poetry, or the package manager
 already used by the project.
 
-If Git CLI is available:
+For plugins published on PyPI:
+
+```bash
+uv add sim-cli-core sim-plugin-icepak
+```
+
+For an exact PyPI version:
+
+```bash
+uv add sim-cli-core "sim-plugin-icepak==0.1.0"
+```
+
+For source installs when PyPI is unavailable or a specific commit is required,
+use the GitHub URL from the table. If Git CLI is available:
 
 ```bash
 uv add sim-cli-core "sim-plugin-mechanical @ git+https://github.com/svd-ai-lab/sim-plugin-mechanical.git@<tag-or-commit>"
@@ -53,6 +67,7 @@ plugin package in the project environment.
 | Flotherm | Electronics thermal simulation | `sim-plugin-flotherm` | `https://github.com/svd-ai-lab/sim-plugin-flotherm` |
 | STAR-CCM+ | CFD | `sim-plugin-starccm` | `https://github.com/svd-ai-lab/sim-plugin-starccm` |
 | Ansys HFSS | 3D electromagnetics | `sim-plugin-hfss` | `https://github.com/svd-ai-lab/sim-plugin-hfss` |
+| Ansys Icepak | Electronics thermal simulation | `sim-plugin-icepak` | `https://github.com/svd-ai-lab/sim-plugin-icepak` |
 | MATLAB / Simulink | MATLAB / Simulink | `sim-plugin-matlab` | `https://github.com/svd-ai-lab/sim-plugin-matlab` |
 | SimScale | Cloud CAE | `sim-plugin-simscale` | `https://github.com/svd-ai-lab/sim-plugin-simscale` |
 | OpenFOAM | CFD | `sim-plugin-openfoam` | `https://github.com/svd-ai-lab/sim-plugin-openfoam` |
@@ -61,7 +76,13 @@ plugin package in the project environment.
 
 ## Package spec patterns
 
-Use the repository URL from the table above.
+Use PyPI package names directly when the package has a public PyPI release:
+
+```bash
+uv add sim-cli-core "<package-name>==<version>"
+```
+
+Use the repository URL from the table above for source installs.
 
 With Git CLI:
 
@@ -91,12 +112,15 @@ discoverability.
    `pyproject.toml` at the root.
 2. Open a PR adding a row to the table above.
 3. Include the full public GitHub URL and the Python package name.
-4. Keep package specs installable by both Git CLI and archive URL patterns when
-   possible.
+4. If the plugin is on PyPI, include the PyPI package name exactly. If it is not
+   on PyPI, keep package specs installable by both Git CLI and archive URL
+   patterns when possible.
 
 ## For agents
 
-Parse the table above to discover public plugin repos and package names. Install
-`sim-cli-core` plus the plugin package into the user's project environment, then
-run `sync-skills`, `check`, and `doctor` from that same environment when the
-user is working outside a desktop bundle that already includes solver skills.
+Parse the table above to discover public plugin repos and package names. Prefer
+the PyPI package spec when it exists; otherwise use the GitHub source or archive
+spec. Install `sim-cli-core` plus the plugin package into the user's project
+environment, then run `sync-skills`, `check`, and `doctor` from that same
+environment when the user is working outside a desktop bundle that already
+includes solver skills.
