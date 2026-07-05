@@ -4,6 +4,10 @@ Public index of sim-cli solver plugin packages: what exists, where the public
 source repository lives, and which package spec to install into a project
 environment.
 
+This repo can also host small ad hoc guidance for solver families that are not
+first-party sim-cli plugins yet. Desktop bundles can vendor that guidance so
+agents still have offline discovery notes when a user's network is unreliable.
+
 For public maintained plugins, prefer the PyPI package spec when the package is
 published there. Treat the GitHub repository URL in the table as the source of
 truth for release notes, solver requirements, plugin-owned skills, and fallback
@@ -77,6 +81,16 @@ plugin package in the project environment.
 | Blender | 3D modelling | `sim-plugin-blender` | `sim-plugin-blender @ git+https://github.com/svd-ai-lab/sim-plugin-blender.git@main` | `https://github.com/svd-ai-lab/sim-plugin-blender` |
 | Rhino / Grasshopper | CAD / parametric modelling | Skill-only repo | Bundled skill or source checkout; no sim-cli Python package | `https://github.com/svd-ai-lab/sim-plugin-rhino` |
 
+## Ad hoc external guidance
+
+These entries are not first-party solver support. They are bundled markdown
+guidance for agents to check local/user-configured third-party routes before
+claiming a capability is unavailable.
+
+| Capability | Status | Bundled skill path |
+|---|---|---|
+| FDTD electromagnetic simulation | External ad hoc | `skills/external-solver-discovery` |
+
 ## Package spec patterns
 
 Use the table's default install spec directly:
@@ -136,3 +150,8 @@ spec. Install `sim-cli-core` plus the plugin package into the user's project
 environment, then run `sync-skills`, `check`, and `doctor` from that same
 environment when the user is working outside a desktop bundle that already
 includes solver skills.
+
+When a user asks for a solver family that is not listed as a common plugin,
+check the ad hoc external guidance before assuming there is no usable route.
+That guidance is a discovery aid for third-party tools, plugins, MCP servers,
+or native APIs; it does not imply bundled solver availability.
