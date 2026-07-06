@@ -1,6 +1,6 @@
 ---
 name: external-solver-discovery
-description: "Discover and safely use external ad hoc solver capabilities, third-party skills, plugins, MCP servers, or native APIs when Huanjing Studio does not bundle a first-party solver path. Use for unsupported solver requests such as FDTD, Lumerical, Meep, openEMS, Tidy3D, gprMax, or user-provided external integrations."
+description: "Discover and safely use external ad hoc solver capabilities, third-party skills, plugins, MCP servers, or native APIs when Huanjing Studio does not bundle a first-party solver path. Use for unsupported solver requests such as FDTD, Lumerical, Meep, openEMS, Tidy3D, gprMax, CST Studio Suite, or user-provided external integrations."
 ---
 
 # External Solver Discovery
@@ -93,6 +93,42 @@ For any FDTD route, collect evidence from the actual tool or API: version or
 install path, opened project or parsed script, run log, mesh/result metadata,
 monitor exports, fields, flux data, S-parameters, HDF5/CSV output, or the
 domain-specific result requested by the user.
+
+## CST Third-Party Reference Checklist
+
+Huanjing Studio does not currently bundle first-party CST Studio Suite support.
+The public CAE-Agent-Hub repository can be used as a third-party reference when
+the user explicitly wants a CST MCP route or CST workflow skill:
+
+- CST MCP reference:
+  `https://github.com/Cai-aa/CAE-Agent-Hub/tree/main/MCP/CST`
+- CST workflow skill reference:
+  `https://github.com/Cai-aa/CAE-Agent-Hub/tree/main/Skill/CST/cst-simulation-workflow`
+
+Treat these URLs as discovery pointers, not bundled or audited support. Before
+using them:
+
+- Check local evidence first: `.cst` projects, CST Studio Suite install paths,
+  `CST_INSTALL_ROOT`, visible MCP server registrations, visible skill folders,
+  project package files, and user-provided paths or license hints.
+- If CAE-Agent-Hub is present or the user asks to install it, inspect the
+  repository README, CST MCP README, CST skill `SKILL.md`, and MCP tool surface
+  from that checkout before running tools.
+- Do not clone, install dependencies, register the MCP server, open CST, run a
+  solver, or consume a CST license seat without user approval.
+- Prefer a project-local checkout pinned to a tag or commit when installing.
+  Avoid presenting a floating third-party `main` checkout as a reproducible
+  integration.
+- Verify the MCP transport with a health, detect, or tool-list probe before
+  opening projects or invoking CST automation.
+- Work on a copy of any user `.cst` project unless the user explicitly requests
+  in-place modification.
+
+For CST work, engineering evidence should come from the real CST route: detected
+version or install path, opened project metadata, saved project path, solver log,
+result tree entries, exported S-parameters, Touchstone files, field data,
+far-field or near-field exports, sweep summaries, or the specific result the
+user requested.
 
 ## Reporting
 

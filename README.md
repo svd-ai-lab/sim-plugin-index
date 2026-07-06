@@ -85,11 +85,13 @@ plugin package in the project environment.
 
 These entries are not first-party solver support. They are bundled markdown
 guidance for agents to check local/user-configured third-party routes before
-claiming a capability is unavailable.
+claiming a capability is unavailable. Third-party reference URLs are discovery
+pointers only: they are not bundled, audited, installed, or supported by default.
 
-| Capability | Status | Bundled skill path |
-|---|---|---|
-| FDTD electromagnetic simulation | External ad hoc | `skills/external-solver-discovery` |
+| Capability | Status | Guidance path | Third-party reference |
+|---|---|---|---|
+| FDTD electromagnetic simulation | External ad hoc | `skills/external-solver-discovery` | None |
+| CST Studio Suite electromagnetic simulation | External third-party reference | `skills/external-solver-discovery` | [CAE-Agent-Hub CST MCP](https://github.com/Cai-aa/CAE-Agent-Hub/tree/main/MCP/CST), [CST workflow skill](https://github.com/Cai-aa/CAE-Agent-Hub/tree/main/Skill/CST/cst-simulation-workflow) |
 
 ## Package spec patterns
 
@@ -155,3 +157,9 @@ When a user asks for a solver family that is not listed as a common plugin,
 check the ad hoc external guidance before assuming there is no usable route.
 That guidance is a discovery aid for third-party tools, plugins, MCP servers,
 or native APIs; it does not imply bundled solver availability.
+
+When an ad hoc row includes a third-party reference URL, inspect the linked
+README, manifest, skill, and tool schema from the user's chosen checkout before
+using it. Ask before cloning, installing dependencies, registering MCP servers,
+or consuming a solver license, and prefer pinning a tag or commit for any
+project-local install.
