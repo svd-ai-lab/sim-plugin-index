@@ -1,6 +1,6 @@
 ---
 name: external-solver-discovery
-description: "Discover and safely use external ad hoc solver capabilities, third-party skills, plugins, MCP servers, or native APIs when Huanjing Studio does not bundle a first-party solver path. Use for unsupported solver requests such as FDTD, Lumerical, Meep, openEMS, Tidy3D, gprMax, CST Studio Suite, or user-provided external integrations."
+description: "Discover and safely use external ad hoc solver capabilities, third-party skills, plugins, MCP servers, or native APIs when the host app or agent environment does not bundle a first-party solver path. Use for unsupported solver requests such as FDTD, Lumerical, Meep, openEMS, Tidy3D, gprMax, CST Studio Suite, or user-provided external integrations."
 ---
 
 # External Solver Discovery
@@ -60,8 +60,8 @@ these tie-breakers:
 
 ## FDTD Ad Hoc Checklist
 
-Huanjing Studio does not currently bundle first-party FDTD support. When a user
-asks for FDTD, Lumerical, Meep, openEMS, Tidy3D, gprMax, or files such as
+The host app or agent environment may not bundle first-party FDTD support. When
+a user asks for FDTD, Lumerical, Meep, openEMS, Tidy3D, gprMax, or files such as
 `.fsp` or `.lsf`, treat the request as external ad hoc discovery.
 
 Candidate routes to check:
@@ -96,9 +96,9 @@ domain-specific result requested by the user.
 
 ## CST Third-Party Reference Checklist
 
-Huanjing Studio does not currently bundle first-party CST Studio Suite support.
-The public CAE-Agent-Hub repository can be used as a third-party reference when
-the user explicitly wants a CST MCP route or CST workflow skill:
+The host app or agent environment may not bundle first-party CST Studio Suite
+support. The public CAE-Agent-Hub repository can be used as a third-party
+reference when the user explicitly wants a CST MCP route or CST workflow skill:
 
 - CST MCP reference:
   `https://github.com/Cai-aa/CAE-Agent-Hub/tree/main/MCP/CST`
