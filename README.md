@@ -73,7 +73,6 @@ plugin package in the project environment.
 | Ansys HFSS | 3D electromagnetics | `sim-plugin-hfss` | `sim-plugin-hfss` | `https://github.com/svd-ai-lab/sim-plugin-hfss` |
 | Ansys Icepak | Electronics thermal simulation | `sim-plugin-icepak` | `sim-plugin-icepak` | `https://github.com/svd-ai-lab/sim-plugin-icepak` |
 | HyperMesh | Meshing / model deck prep | `sim-plugin-hypermesh` | `sim-plugin-hypermesh @ git+https://github.com/svd-ai-lab/sim-plugin-hypermesh.git@main` | `https://github.com/svd-ai-lab/sim-plugin-hypermesh` |
-| MATLAB / Simulink | MATLAB / Simulink | `sim-plugin-matlab` | `sim-plugin-matlab` | `https://github.com/svd-ai-lab/sim-plugin-matlab` |
 | Stata | Statistics / econometrics | `sim-plugin-stata` | `sim-plugin-stata @ git+https://github.com/svd-ai-lab/sim-plugin-stata.git@main` | `https://github.com/svd-ai-lab/sim-plugin-stata` |
 | SimScale | Cloud CAE | `sim-plugin-simscale` | `sim-plugin-simscale` | `https://github.com/svd-ai-lab/sim-plugin-simscale` |
 | OpenFOAM | CFD | `sim-plugin-openfoam` | `sim-plugin-openfoam` | `https://github.com/svd-ai-lab/sim-plugin-openfoam` |
