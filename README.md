@@ -23,13 +23,13 @@ already used by the project.
 For plugins published on PyPI:
 
 ```bash
-uv add sim-cli-core sim-plugin-icepak
+uv add sim-cli-core sim-plugin-hfss
 ```
 
 For an exact PyPI version:
 
 ```bash
-uv add sim-cli-core "sim-plugin-icepak==0.1.0"
+uv add sim-cli-core "sim-plugin-hfss==0.1.2"
 ```
 
 For source installs when PyPI is unavailable or a specific commit is required,
@@ -71,14 +71,7 @@ plugin package in the project environment.
 | Flotherm | Electronics thermal simulation | `sim-plugin-flotherm` | `sim-plugin-flotherm @ git+https://github.com/svd-ai-lab/sim-plugin-flotherm.git@main` | `https://github.com/svd-ai-lab/sim-plugin-flotherm` |
 | STAR-CCM+ | CFD | `sim-plugin-starccm` | `sim-plugin-starccm @ git+https://github.com/svd-ai-lab/sim-plugin-starccm.git@main` | `https://github.com/svd-ai-lab/sim-plugin-starccm` |
 | Ansys HFSS | 3D electromagnetics | `sim-plugin-hfss` | `sim-plugin-hfss` | `https://github.com/svd-ai-lab/sim-plugin-hfss` |
-| Ansys Icepak | Electronics thermal simulation | `sim-plugin-icepak` | `sim-plugin-icepak` | `https://github.com/svd-ai-lab/sim-plugin-icepak` |
 | HyperMesh | Meshing / model deck prep | `sim-plugin-hypermesh` | `sim-plugin-hypermesh @ git+https://github.com/svd-ai-lab/sim-plugin-hypermesh.git@main` | `https://github.com/svd-ai-lab/sim-plugin-hypermesh` |
-| Stata | Statistics / econometrics | `sim-plugin-stata` | `sim-plugin-stata @ git+https://github.com/svd-ai-lab/sim-plugin-stata.git@main` | `https://github.com/svd-ai-lab/sim-plugin-stata` |
-| SimScale | Cloud CAE | `sim-plugin-simscale` | `sim-plugin-simscale` | `https://github.com/svd-ai-lab/sim-plugin-simscale` |
-| OpenFOAM | CFD | `sim-plugin-openfoam` | `sim-plugin-openfoam` | `https://github.com/svd-ai-lab/sim-plugin-openfoam` |
-| LTspice | Circuit / SPICE | `sim-plugin-ltspice` | `sim-plugin-ltspice` | `https://github.com/svd-ai-lab/sim-plugin-ltspice` |
-| Blender | 3D modelling | `sim-plugin-blender` | `sim-plugin-blender @ git+https://github.com/svd-ai-lab/sim-plugin-blender.git@main` | `https://github.com/svd-ai-lab/sim-plugin-blender` |
-| Rhino / Grasshopper | CAD / parametric modelling | Skill-only repo | Bundled skill or source checkout; no sim-cli Python package | `https://github.com/svd-ai-lab/sim-plugin-rhino` |
 
 ## Ad hoc external guidance
 
