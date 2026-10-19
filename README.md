@@ -1,3 +1,6 @@
+> [!IMPORTANT]
+> **This repository has moved.** The plugin index is now generated in [svd-ai-lab/sim-cli](https://github.com/svd-ai-lab/sim-cli) as [`plugin-index.json`](https://github.com/svd-ai-lab/sim-cli/blob/main/plugin-index.json), and the `external-solver-discovery` skill ships with `sim-cli-core`. This repository is archived and read-only.
+
 # sim-plugin-index
 
 Public index of sim-cli solver plugin packages: what exists, where the public
